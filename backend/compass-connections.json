@@ -1,0 +1,26 @@
+{
+  "type": "Compass Connections",
+  "version": {
+    "$numberInt": "1"
+  },
+  "connections": [
+    {
+      "id": "9393bb1c-2508-45e8-8ae2-5d53ce41aa2e",
+      "lastUsed": {
+        "$date": {
+          "$numberLong": "1766818498965"
+        }
+      },
+      "favorite": {
+        "name": "odoo_hackathon"
+      },
+      "savedConnectionType": "recent",
+      "connectionOptions": {
+        "connectionString": "mongodb://localhost:27017/",
+        "oidc": {
+          "serializedState": "eyJvaWRjUGx1Z2luU3RhdGVWZXJzaW9uIjoxLCJzdGF0ZSI6W119"
+        }
+      }
+    }
+  ]
+}

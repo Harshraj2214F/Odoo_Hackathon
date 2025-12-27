@@ -3,6 +3,7 @@ const Request = require("../models/MaintenanceRequest");
 const Equipment = require("../models/Equipment");
 const router = express.Router();
 
+
 // Auto Fill When team is selected
 router.get("/equipment/:id/team", async (req, res) => {
   try {
@@ -16,6 +17,11 @@ router.get("/equipment/:id/team", async (req, res) => {
 // Create request
 router.post("/", async (req, res) => {
   try {
+    const { subject, type } = req.body;
+    if (!subject || !type) {
+      return res.status(400).json({ error: "subject and type are required" });
+    }
+
     const request = new Request(req.body);
     await request.save();
     const populated = await Request.findById(request._id).populate(

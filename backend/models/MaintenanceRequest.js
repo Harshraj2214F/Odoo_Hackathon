@@ -10,16 +10,16 @@ const MaintTeamSchema = new mongoose.Schema(
     team: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "MaintTeam",
-      type: {
-        type: String,
-        enum: ["Corrective", "Preventive"],
-        required: true,
-      },
+    },
+    type: {
+      type: String,
+      enum: ["corrective", "preventive", "predictive"],
+      required: true,
     },
     stage: {
       type: String,
-      enum: ["New", "In Progress", "Repaired", "Scrap"],
-      default: "New",
+      enum: ["new", "in progress", "repaired", "scrap"],
+      default: "new",
     },
     scheduledDate: Date,
     duration: Number,
